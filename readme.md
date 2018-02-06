@@ -1,33 +1,19 @@
-## Use Azure app service editor
+# LUIS Demo
+This project's code is meant to be deployed alongisde an Azure web bot. 
 
-1. make code change in the online editor
-2. open the console window and run
+## Intent
+The only extra intent (past the stock trained intents) is "GetPost". Get post displays all the entities from within the code. 
 
-```
-build.cmd
-```
+![alt text](https://github.com/wobey/LUIS_Demo/blob/master/demo1.png)
 
-## Use Visual Studio 
+## Entry
+LUIS has been trained to recognize three entry types:
+1. Temperature (the temperature at the time the Reddit post was made),
+2. TitleKeyword (the keyword to search in the Reddit title),
+3. TableType (the database table to query).
 
-### Build and debug
-1. download source code zip and extract source in local folder
-2. open {PROJ_NAME}.sln in Visual Studio
-3. build and run the bot
-4. download and run [botframework-emulator](https://emulator.botframework.com/)
-5. connect the emulator to http://localhost:3987
+![alt text](https://github.com/wobey/LUIS_Demo/blob/master/demo2.png)
 
-### Publish back
-
-In Visual Studio, right click on {PROJ_NAME} and select 'Publish'
-
-For first time publish after downloading source code
-1. In the publish profiles tab, click 'Import'
-2. Browse to 'PostDeployScripts' and pick '{SITE_NAME}.publishSettings'
-
-
-## Use continuous integration
-
-If you have setup continuous integration, then your bot will automatically deployed when new changes are pushed to the source repository.
-
-
-
+## Future Ambition
+The next steps of this bot will allow it to query a database and return relevant information to the user. The intents and entries seen above are based on an existing bot that I made. It attempts to correlate Seattle Reddit posts with the current weather condition, and inserts them into a database:
+* https://github.com/wobey/Web-Scraper
