@@ -7,10 +7,11 @@ The only extra intent (past the stock trained intents) is "GetPost". Get post di
 ![alt text](https://github.com/wobey/LUIS_Demo/blob/master/demo1.png)
 
 ## Entry
-LUIS has been trained to recognize three entry types:
+LUIS has been trained to recognize four entry types:
 1. Temperature (the temperature at the time the Reddit post was made),
 2. TitleKeyword (the keyword to search in the Reddit title),
-3. TableType (the database table to query).
+3. TableType (the database table to query),
+4. DBTime (the time of the Reddit post or Weather condition).
 
 ![alt text](https://github.com/wobey/LUIS_Demo/blob/master/demo2.png)
 
